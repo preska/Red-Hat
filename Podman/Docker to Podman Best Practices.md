@@ -12,12 +12,11 @@
 8. [CI/CD Pipeline Updates](#8-cicd-pipeline-updates)
 9. [Monitoring and Logging](#9-monitoring-and-logging)
 10. [Performance Tuning](#10-performance-tuning)
-11. [Documentation and Training](#11-documentation-and-training)
-12. [Gradual Migration Strategy](#12-gradual-migration-strategy)
-13. [Post-Migration Validation](#13-post-migration-validation)
-14. [Ongoing Maintenance](#14-ongoing-maintenance)
-15. [Troubleshooting Common Issues](#15-troubleshooting-common-issues)
-16. [Additional Resources](#16-additional-resources)
+11. [Gradual Migration Strategy](#11-gradual-migration-strategy)
+12. [Post-Migration Validation](#12-post-migration-validation)
+13. [Ongoing Maintenance](#13-ongoing-maintenance)
+14. [Troubleshooting Common Issues](#14-troubleshooting-common-issues)
+15. [Additional Resources](#15-additional-resources)
 
 ## 1. Introduction
 This guide outlines best practices for migrating highly secure Docker container applications to Podman. It covers key considerations, steps, and security measures to ensure a smooth transition.
@@ -445,164 +444,129 @@ This comprehensive pre-migration assessment will provide a solid foundation for 
 - Optimize host system settings for running Podman containers
 - Tune kernel parameters for container workloads
 
-## 11. Documentation and Training
+## 11. Gradual Migration Strategy
 
-### 11.1 Update Technical Documentation
-- Revise all Docker-related documentation to reflect Podman usage
-- Create new Podman-specific guides and references
-- Document any changes in workflows or processes
-
-### 11.2 Create Migration Guides
-- Develop step-by-step migration guides for different types of applications
-- Include troubleshooting sections for common migration issues
-
-### 11.3 Update Operational Procedures
-- Revise runbooks and operational guides to include Podman commands
-- Create new procedures for Podman-specific tasks
-
-### 11.4 Develop Training Materials
-- Create training modules covering Podman basics and advanced topics
-- Develop hands-on exercises and labs for practical experience
-
-### 11.5 Conduct Training Sessions
-- Organize training sessions for development, operations, and QA teams
-- Provide specialized training for security and compliance teams
-
-### 11.6 Create Quick Reference Guides
-- Develop cheat sheets for common Podman commands and operations
-- Create comparison charts between Docker and Podman commands
-
-### 11.7 Set Up Internal Knowledge Base
-- Establish a centralized repository for Podman-related information
-- Implement a system for sharing best practices and lessons learned
-
-### 11.8 External Communication
-- Update client-facing documentation if applicable
-- Prepare communication materials explaining the transition to stakeholders
-
-## 12. Gradual Migration Strategy
-
-### 12.1 Prioritize Applications for Migration
+### 11.1 Prioritize Applications for Migration
 - Identify low-risk, non-critical applications for initial migration
 - Create a prioritized list of applications to migrate
 
-### 12.2 Develop Migration Phases
+### 11.2 Develop Migration Phases
 - Break down the migration into manageable phases
 - Set clear goals and timelines for each phase
 
-### 12.3 Create Test Environments
+### 11.3 Create Test Environments
 - Set up isolated test environments for Podman migration
 - Ensure test environments mirror production as closely as possible
 
-### 12.4 Implement Parallel Running
+### 11.4 Implement Parallel Running
 - Run Docker and Podman versions of applications in parallel where possible
 - Compare performance and behavior between Docker and Podman versions
 
-### 12.5 Incremental Cutover
+### 11.5 Incremental Cutover
 - Gradually shift traffic from Docker to Podman versions of applications
 - Monitor closely for any issues during the transition
 
-### 12.6 Rollback Planning
+### 11.6 Rollback Planning
 - Develop detailed rollback plans for each migrated application
 - Ensure ability to quickly revert to Docker if critical issues arise
 
-### 12.7 Feedback Loop
+### 11.7 Feedback Loop
 - Establish a process for collecting and acting on feedback during migration
 - Regularly review and adjust the migration strategy based on learnings
 
-## 13. Post-Migration Validation
+## 12. Post-Migration Validation
 
-### 13.1 Functionality Testing
+### 12.1 Functionality Testing
 - Conduct thorough functionality tests on all migrated applications
 - Verify that all features work as expected in the Podman environment
 
-### 13.2 Performance Validation
+### 12.2 Performance Validation
 - Run performance tests to compare against pre-migration baselines
 - Identify and address any performance regressions
 
-### 13.3 Security Audit
+### 12.3 Security Audit
 - Conduct a comprehensive security audit of the Podman environment
 - Verify that all security controls are properly implemented
 
-### 13.4 Compliance Check
+### 12.4 Compliance Check
 - Ensure that the Podman environment meets all relevant compliance requirements
 - Update compliance documentation to reflect the new container platform
 
-### 13.5 Penetration Testing
+### 12.5 Penetration Testing
 - Perform penetration testing on the Podman infrastructure
 - Address any vulnerabilities discovered during testing
 
-### 13.6 Disaster Recovery Testing
+### 12.6 Disaster Recovery Testing
 - Test disaster recovery procedures in the Podman environment
 - Verify data persistence and recovery capabilities
 
-### 13.7 Load Testing
+### 12.7 Load Testing
 - Conduct load tests to ensure the Podman environment can handle expected traffic
 - Verify scaling and resource allocation under high load
 
-### 13.8 Integration Validation
+### 12.8 Integration Validation
 - Test all integrations with external systems and services
 - Verify that data flows correctly between Podman containers and other systems
 
-## 14. Ongoing Maintenance
+## 13. Ongoing Maintenance
 
-### 14.1 Regular Updates
+### 13.1 Regular Updates
 - Establish a schedule for regular Podman updates
 - Test updates in a staging environment before applying to production
 
-### 14.2 Security Patching
+### 13.2 Security Patching
 - Implement a process for quickly applying security patches to Podman
 - Regularly update base images and dependencies
 
-### 14.3 Performance Monitoring
+### 13.3 Performance Monitoring
 - Continuously monitor performance of Podman containers
 - Implement automated alerts for performance degradation
 
-### 14.4 Capacity Planning
+### 13.4 Capacity Planning
 - Regularly review resource usage and plan for future capacity needs
 - Optimize resource allocation based on usage patterns
 
-### 14.5 Audit and Compliance
+### 13.5 Audit and Compliance
 - Conduct regular audits of the Podman environment
 - Keep all compliance-related documentation up to date
 
-### 14.6 Knowledge Management
+### 13.6 Knowledge Management
 - Maintain and update Podman-related documentation
 - Encourage knowledge sharing among team members
 
-### 14.7 Community Engagement
+### 13.7 Community Engagement
 - Stay engaged with the Podman community for updates and best practices
 - Contribute back to the community when possible
 
-## 15. Troubleshooting Common Issues
+## 14. Troubleshooting Common Issues
 
-### 15.1 Networking Issues
+### 14.1 Networking Issues
 - Troubleshooting guide for common Podman networking problems
 - Solutions for DNS, port mapping, and inter-container communication issues
 
-### 15.2 Performance Problems
+### 14.2 Performance Problems
 - Steps to diagnose and resolve performance bottlenecks
 - Tools and techniques for performance analysis in Podman
 
-### 15.3 Storage and Volume Issues
+### 14.3 Storage and Volume Issues
 - Troubleshooting persistent storage problems
 - Solutions for common volume mount issues
 
-### 15.4 Security and Permission Problems
+### 14.4 Security and Permission Problems
 - Guide for resolving common permission and access issues
 - Troubleshooting SELinux and AppArmor related problems
 
-### 15.5 Image and Registry Issues
+### 14.5 Image and Registry Issues
 - Steps to resolve problems with pulling or pushing images
 - Troubleshooting image build failures
 
-### 15.6 Resource Constraints
+### 14.6 Resource Constraints
 - Diagnosing and resolving issues related to CPU, memory, or I/O constraints
 - Troubleshooting container resource limits
 
-## 16. Additional Resources
+## 15. Additional Resources
 
-### 16.1 Official Documentation
+### 15.1 Official Documentation
 - [Podman documentation](https://podman-desktop.io/docs/migrating-from-docker)
 - TBA
 
