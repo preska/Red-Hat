@@ -4,7 +4,7 @@
 This guide outlines best practices for migrating highly secure Docker container applications to Podman. It covers key considerations, steps, and security measures to ensure a smooth transition.
 
 ## 2. Pre-Migration Assessment
-- Inventory all Docker images, containers, and volumes
+- [Inventory all Docker images, containers, and volumes](https://github.com/preska/RedHat/blob/main/Podman/2.1%20Inventory%20Docker%20Assets)
 - Document current Docker configurations and dependencies
 - Identify Docker-specific features in use
 - Assess current security measures and policies
