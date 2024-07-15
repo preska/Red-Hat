@@ -1,5 +1,24 @@
 # Best Practices Guide: Transitioning Secure Docker Apps to Podman
 
+# Docker to Podman Migration Guide: Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Pre-Migration Assessment](#2-pre-migration-assessment)
+3. [Podman Installation and Setup](#3-podman-installation-and-setup)
+4. [Image Compatibility](#4-image-compatibility)
+5. [Container Configuration](#5-container-configuration)
+6. [Security Enhancements](#6-security-enhancements)
+7. [Orchestration and Compose](#7-orchestration-and-compose)
+8. [CI/CD Pipeline Updates](#8-cicd-pipeline-updates)
+9. [Monitoring and Logging](#9-monitoring-and-logging)
+10. [Performance Tuning](#10-performance-tuning)
+11. [Documentation and Training](#11-documentation-and-training)
+12. [Gradual Migration Strategy](#12-gradual-migration-strategy)
+13. [Post-Migration Validation](#13-post-migration-validation)
+14. [Ongoing Maintenance](#14-ongoing-maintenance)
+15. [Troubleshooting Common Issues](#15-troubleshooting-common-issues)
+16. [Additional Resources](#16-additional-resources)
+
 ## 1. Introduction
 This guide outlines best practices for migrating highly secure Docker container applications to Podman. It covers key considerations, steps, and security measures to ensure a smooth transition.
 
