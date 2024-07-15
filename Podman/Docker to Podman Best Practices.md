@@ -5,9 +5,9 @@ This guide outlines best practices for migrating highly secure Docker container 
 
 ## 2. Pre-Migration Assessment
 - [Inventory all Docker images, containers, and volumes](https://github.com/preska/RedHat/blob/main/Podman/2.1%20Inventory%20Docker%20Assets)
-- Document current Docker configurations and dependencies
-- Identify Docker-specific features in use
-- Assess current security measures and policies
+- [Document current Docker configurations and dependencies](https://github.com/preska/RedHat/blob/main/Podman/2.2%20Document%20Current%20Docker%20Configurations.md)
+- [Identify Docker-specific features in use](https://github.com/preska/RedHat/blob/main/Podman/2.3%20Identify%20Docker-Specific%20Features.md)
+- [Assess current security measures and policies]
 
 ## 3. Podman Installation and Setup
 - Install Podman on development and production environments
