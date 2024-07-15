@@ -78,14 +78,91 @@ The pre-migration assessment is a crucial first step in transitioning from Docke
 This comprehensive pre-migration assessment will provide a solid foundation for planning your transition to Podman, helping to identify potential challenges and ensuring that all aspects of your current Docker environment are considered in the migration process.
 
 ## 3. Podman Installation and Setup
-- Install Podman on development and production environments
-- Configure Podman for rootless operation (recommended for security)
-- Set up user namespaces for rootless containers
+
+### 3.1 Install Podman
+- Choose the appropriate installation method for your OS:
+  - For Linux: Use package managers (apt, yum, dnf)
+  - For macOS: Use Homebrew or Podman Machine
+  - For Windows: Use WSL2 or Podman Machine
+- Verify installation with `podman version`
+- Install complementary tools: Buildah, Skopeo
+
+### 3.2 Configure for Rootless Operation
+- Ensure user namespaces are enabled in the kernel
+- Configure subuid and subgid ranges:
+  - Edit /etc/subuid and /etc/subgid
+  - Allocate sufficient UID/GID ranges for container users
+- Set up slirp4netns for rootless network connectivity
+- Configure user systemd for managing rootless containers
+
+### 3.3 Set Up User Namespaces
+- Create a mapping file for UID/GID remapping
+- Test user namespace functionality with a simple container
+- Document any limitations or issues encountered with user namespaces
+
+### 3.4 Configure Podman Registries
+- Set up access to required container registries
+- Configure authentication for private registries
+- Test pulling and pushing images to ensure proper setup
+
+### 3.5 Establish Podman Networking
+- Understand Podman's CNI-based networking
+- Configure network bridges if needed
+- Set up DNS for container name resolution
+
+### 3.6 Set Up Persistent Volume Storage
+- Choose and configure a volume driver compatible with Podman
+- Test volume creation and attachment to containers
+
+### 3.7 Configure Logging
+- Set up logging drivers compatible with your infrastructure
+- Test log collection and rotation mechanisms
+
+### 3.8 Implement Resource Controls
+- Configure cgroup v2 for resource management
+- Set up limits for CPU, memory, and I/O
 
 ## 4. Image Compatibility
-- Test Docker images with Podman
-- Address any compatibility issues
-- Consider rebuilding images using Podman for optimized performance
+
+### 4.1 Assess Docker Image Compatibility
+- Create an inventory of all Docker images in use
+- Categorize images: public, private registry, custom-built
+
+### 4.2 Test Docker Images with Podman
+- Pull Docker images using Podman:
+  `podman pull docker://[image]`
+- Attempt to run containers from these images
+- Document any issues or incompatibilities encountered
+
+### 4.3 Address Compatibility Issues
+- Identify common problems (e.g., entrypoint scripts, volume mounts)
+- Modify Dockerfiles or container configurations as needed
+- Test modified images to ensure they work with Podman
+
+### 4.4 Optimize Images for Podman
+- Consider rebuilding images using Podman and Buildah
+- Implement multi-stage builds to reduce image size
+- Use Podman-specific features for improved security and performance
+
+### 4.5 Update Image Build Processes
+- Modify CI/CD pipelines to build images with Podman/Buildah
+- Update any scripts or tools used for image management
+
+### 4.6 Implement Image Scanning
+- Set up vulnerability scanning for Podman images
+- Integrate scanning into your CI/CD pipeline
+
+### 4.7 Document Image Changes
+- Create a migration log for each image
+- Update image documentation to reflect Podman-specific details
+
+### 4.8 Establish Image Tagging Strategy
+- Review and update image tagging policies
+- Ensure consistency in tagging across development and production
+
+### 4.9 Test Image Portability
+- Verify that optimized images still work in Docker environments if needed
+- Document any differences in behavior between Docker and Podman
 
 ## 5. Container Configuration
 - Convert Docker run commands to Podman syntax
