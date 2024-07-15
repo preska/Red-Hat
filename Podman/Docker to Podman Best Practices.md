@@ -603,29 +603,7 @@ This comprehensive pre-migration assessment will provide a solid foundation for 
 ## 16. Additional Resources
 
 ### 16.1 Official Documentation
-- Link to official Podman documentation
-- Guides to Podman GitHub repositories and wikis
+- [Podman documentation](https://podman-desktop.io/docs/migrating-from-docker)
+- TBA
 
-### 16.2 Community Resources
-- Links to Podman forums and mailing lists
-- Information on Podman IRC channels or chat groups
 
-### 16.3 Books and Publications
-- Recommended books on Podman and container technologies
-- Relevant whitepapers and technical publications
-
-### 16.4 Training Resources
-- Online courses and tutorials for Podman
-- Information on official Podman certification programs, if available
-
-### 16.5 Tools and Utilities
-- List of helpful third-party tools for Podman management
-- Utilities for migration, monitoring, and optimization
-
-### 16.6 Case Studies
-- Examples of successful Docker to Podman migrations
-- Industry-specific case studies if available
-
-### 16.7 Comparison Resources
-- Detailed comparisons between Docker and Podman features
-- Performance benchmarks and analysis
